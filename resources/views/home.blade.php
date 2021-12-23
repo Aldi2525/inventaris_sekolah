@@ -13,6 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @role('admin')
+                    Role Admin {{\Laratrust::hasRole('admin') }}
+                    @endrole
 
                     {{ __('You are logged in!') }}
                 </div>
