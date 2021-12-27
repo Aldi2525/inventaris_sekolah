@@ -251,25 +251,31 @@ return [
             'url'  => 'admin/kategori',
             'icon'  => 'far fa-fw fa-y',
         ],
-        [
-            'text'        => 'Data Barang',
-            'url'         => 'admin/barang',
-            'icon'        => 'far fa-fw fa-y',
-        ],
+
         [
             'text'    => 'Barang',
             'icon'    => 'fas fa-fw fa-y',
             'submenu' => [
                 [
+                    'text'        => 'Data Barang',
+                    'url'         => 'admin/barang',
+                    'icon'        => 'far fa-fw fa-y',
+                ],
+                [
                     'text' => 'Barang Masuk',
-                    'url'  => '#',
+                    'url'  => 'admin/bmsk',
                     'icon'        => 'far fa-fw fa-y',
                 ],
                 [
                     'text'    => 'Barang Keluar',
-                    'url'     => '#',
+                    'url'     => 'admin/bklr',
                     'icon'        => 'far fa-fw fa-y',
 
+                ],
+                [
+                    'text'        => 'Stok Barang',
+                    'url'         => 'admin/stok',
+                    'icon'        => 'far fa-fw fa-y',
                 ],
             ],
         ],
@@ -278,8 +284,10 @@ return [
             'url'         => 'admin/laporan',
             'icon'        => 'far fa-fw fa-y',
         ],
-    ],
 
+
+
+    ],
 
     /*
     |--------------------------------------------------------------------------

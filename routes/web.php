@@ -32,5 +32,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
     });
     Route::get('profile', function() {
         return 'halaman profile admin';
+
     });
+
 });
+
