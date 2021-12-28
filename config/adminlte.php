@@ -247,11 +247,10 @@ return [
             'icon'        => 'far fa-fw fa-y',
         ],
         [
-            'text' => 'Kategori',
-            'url'  => 'admin/kategori',
-            'icon'  => 'far fa-fw fa-y',
+            'text'        => 'Supplier',
+            'url'         => 'admin/supplier',
+            'icon'        => 'far fa-fw fa-y',
         ],
-
         [
             'text'    => 'Barang',
             'icon'    => 'fas fa-fw fa-y',
@@ -272,16 +271,12 @@ return [
                     'icon'        => 'far fa-fw fa-y',
 
                 ],
-                [
-                    'text'        => 'Stok Barang',
-                    'url'         => 'admin/stok',
-                    'icon'        => 'far fa-fw fa-y',
-                ],
             ],
         ],
+
         [
-            'text'        => 'Cetak Laporan',
-            'url'         => 'admin/laporan',
+            'text'        => 'Data Peminjaman',
+            'url'         => 'admin/peminjaman',
             'icon'        => 'far fa-fw fa-y',
         ],
 

@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\StokController;
+use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -34,6 +35,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
         return 'halaman profile admin';
 
     });
-
+    Route::resource('stok', StokController::class);
+    Route::resource('supplier', SupplierController::class);
 });
 
