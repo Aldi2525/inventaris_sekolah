@@ -13,4 +13,13 @@ class Supplier extends Model
     protected $fillable = ['id','nama_supplier','alamat','no_wa'];
 
     public $timestamps = true;
+
+    //membuat relasi one to many
+    public function bmasuks()
+    {
+        // data model "Author" bisa memiliki banyak data
+        //dari model "Book" melalui fk "author_id"
+        $this->hasMany('App\Models\Bmasuk','id_supplier');
+    }
 }
+

@@ -1,11 +1,10 @@
 @extends('adminlte::page')
 
-@section('title','Supplier')
+@section('title','Barang Masuk')
 
 @section('content_header')
 
 <br>
-
 @endsection
 
 
@@ -14,18 +13,20 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Input Supplier</div>
+                <div class="card-header">Input Barang Masuk</div>
                 <div class="card-body">
-                    <form action="{{route('supplier.store')}}" method="post">
+                    <form action="{{route('bmasuk.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Nama Supplier</label>
-                            <input type="text" name="nama_supplier" class="form-control @error('nama_supplier') is-invalid @enderror">
-                            <label for="">Alamat</label>
-                            <input type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror">
-                            <label for="">No Telp</label>
-                            <input type="number" name="no_wa" class="form-control @error('no_wa') is-invalid @enderror">
-                            @error('nama_supplier')
+                            <label for="">Nama Barang</label>
+                            <input type="text" name="nama_barang" class="form-control @error('nama_barang') is-invalid @enderror">
+                            <label for="">Tanggal Masuk</label>
+                            <input type="date" name="tgl_msk" class="form-control @error('tgl_msk') is-invalid @enderror">
+                            <label for="">Jumlah Masuk</label>
+                            <input type="number" name="jumlah_msk" class="form-control @error('jumlah_msk') is-invalid @enderror">
+                            <label for="">Supplier</label>
+                            <input type="text" name="id_supplier" class="form-control @error('id_supplier') is-invalid @enderror">
+                            @error('nama_barang')
 
                             <span class="invalid-feedbaack" role="alert">
                                 <strong>{{$message}}</strong>
