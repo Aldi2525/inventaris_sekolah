@@ -1,7 +1,7 @@
 <?php
-use App\Http\Controllers\StokController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\BmasukController;
+use App\Http\Controllers\GudangController;
 use App\Http\Controllers\BkeluarController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -37,8 +37,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
         return 'halaman profile admin';
 
     });
-    Route::resource('stok', StokController::class);
     Route::resource('supplier', SupplierController::class);
     Route::resource('bmasuk', BmasukController::class);
+    Route::resource('gudang', GudangController::class);
+    Route::resource('bkeluar', BkeluarController::class);
 });
 

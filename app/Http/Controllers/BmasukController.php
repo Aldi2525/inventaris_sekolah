@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Session;
 use App\Models\Bmasuk;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class BmasukController extends Controller
@@ -27,7 +28,8 @@ class BmasukController extends Controller
     public function create()
     {
         //
-        return view('admin.bmasuk.create');
+        $supplier = Supplier::all();
+        return view('admin.bmasuk.create', compact('supplier'));
     }
 
     /**
@@ -99,8 +101,15 @@ class BmasukController extends Controller
      * @param  \App\Models\Bmasuk  $bmasuk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bmasuk $bmasuk)
+    public function destroy($id)
     {
         //
+        $bmasuk = Bmasuk::findOrFail($id);
+        $bmasuk->delete();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Data deleted successfully",
+        ]);
+        return redirect()->route('bmasuk.index');
     }
 }

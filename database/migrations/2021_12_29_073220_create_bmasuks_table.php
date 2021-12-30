@@ -18,7 +18,7 @@ class CreateBmasuksTable extends Migration
             $table->string('nama_barang');
             $table->date('tgl_msk');
             $table->integer('jumlah_msk');
-            $table->bigIntege('id_supplier')->unsigned();
+            $table->bigInteger('id_supplier')->unsigned();
 
             $table->foreign('id_supplier')->references('id')
             ->on('suppliers')->onUpdate('cascade')

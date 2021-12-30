@@ -14,9 +14,10 @@ class Bmasuk extends Model
 
     public $timestamps = true;
 
-    public function bmasuks()
+    public function supplier()
     {
-
-        return $this->belongsTo('App\Models\supplier','id_supplier');
+        // Data model "Model" bisa memiliki oleh model "Author"
+        //melalui fk "author_id"
+        return $this->belongsTo('App\Models\Supplier','id_supplier');
     }
 }

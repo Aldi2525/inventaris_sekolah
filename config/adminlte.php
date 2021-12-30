@@ -257,7 +257,7 @@ return [
             'submenu' => [
                 [
                     'text'        => 'Data Barang',
-                    'url'         => 'admin/barang',
+                    'url'         => 'admin/gudang',
                     'icon'        => 'far fa-fw fa-y',
                 ],
                 [

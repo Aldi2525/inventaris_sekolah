@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title','Dashboard')
+@section('title','Barang Masuk')
 
 @section('content_header')
 
@@ -28,6 +28,7 @@
                                 <th><i>Tanggal Masuk</i></th>
                                 <th><i>Jumlah Masuk</i></th>
                                 <th><i>Supplier</i></th>
+                                <th><i>Aksi</i></th>
                             </tr>
                             </thead>
                             @php $no=1; @endphp
@@ -38,12 +39,12 @@
                                  <td>{{$data->nama_barang}}</td>
                                  <td>{{$data->tgl_msk}}</td>
                                  <td>{{$data->jumlah_msk}}</td>
-                                 <td>{{$data->id_supplier}}</td>
+                                 <td>{{$data->supplier->nama_supplier}}</td>
 
 
 
                                  <td>
-                                     <form action="{{route('bmasuk.destroy',$data->id)}}" method="post">
+                                    <form action="{{route('bmasuk.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
                                         <a href="{{route('bmasuk.edit',$data->id)}}" class="btn btn-outline-info">Edit</a>
