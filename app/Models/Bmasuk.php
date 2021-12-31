@@ -20,4 +20,11 @@ class Bmasuk extends Model
         //melalui fk "author_id"
         return $this->belongsTo('App\Models\Supplier','id_supplier');
     }
+
+    public function gudang()
+    {
+        // Data model "Model" bisa memiliki oleh model "Author"
+        //melalui fk "author_id"
+        return $this->HasMany('App\Models\gudang','id_barang');
+    }
 }

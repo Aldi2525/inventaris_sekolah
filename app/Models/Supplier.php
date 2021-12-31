@@ -22,6 +22,13 @@ class Supplier extends Model
         $this->hasMany('App\Models\Bmasuk','id_supplier');
     }
 
+    public function barang()
+    {
+        // data model "Author" bisa memiliki banyak data
+        //dari model "Book" melalui fk "author_id"
+        $this->hasMany('App\Models\Barang','id_supplier');
+    }
+
     public static function boot()
     {
         parent::boot();

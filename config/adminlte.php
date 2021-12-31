@@ -242,33 +242,33 @@ return [
             'text' => 'search',
         ],
         [
-            'text'        => 'Dashboard',
+            'text'        => ' Dashboard',
             'url'         => '/home',
-            'icon'        => 'far fa-fw fa-y',
+            'icon'        => 'fas fa-home',
         ],
         [
             'text'        => 'Supplier',
             'url'         => 'admin/supplier',
-            'icon'        => 'far fa-fw fa-y',
+            'icon'        => 'fas fa-address-card  ',
         ],
         [
             'text'    => 'Barang',
-            'icon'    => 'fas fa-fw fa-y',
+            'icon'    => 'fas fa-box-open',
             'submenu' => [
                 [
                     'text'        => 'Data Barang',
                     'url'         => 'admin/gudang',
-                    'icon'        => 'far fa-fw fa-y',
+                    'icon'        => 'fas fa-boxes',
                 ],
                 [
                     'text' => 'Barang Masuk',
                     'url'  => 'admin/bmasuk',
-                    'icon'        => 'far fa-fw fa-y',
+                    'icon'        => 'fas fa-cart-plus',
                 ],
                 [
                     'text'    => 'Barang Keluar',
-                    'url'     => 'admin/bklr',
-                    'icon'        => 'far fa-fw fa-y',
+                    'url'     => 'admin/bkeluar',
+                    'icon'        => 'fas fa-file-export',
 
                 ],
             ],

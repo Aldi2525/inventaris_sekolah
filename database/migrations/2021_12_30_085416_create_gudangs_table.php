@@ -15,8 +15,23 @@ class CreateGudangsTable extends Migration
     {
         Schema::create('gudangs', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_barang');
-            $table->bigInteger('jumlah_stok');
+            $table->BigInteger('id_barang')->unsigned();
+            $table->BigInteger('id_supplier')->unsigned();
+            $table->bigInteger('jumlah_stok')->unsigned();
+
+
+
+            $table->foreign('id_barang')->references('id')
+            ->on('bmasuks')->onUpdate('cascade')
+            ->onDelete('cascade');
+
+            $table->foreign('id_supplier')->references('id')
+            ->on('suppliers')->onUpdate('cascade')
+            ->onDelete('cascade');
+
+            $table->foreign('jumlah_stok')->references('jumlah_msk')
+            ->on('bmasuks')->onUpdate('cascade')
+            ->onDelete('cascade');
 
             $table->timestamps();
         });

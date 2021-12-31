@@ -4,13 +4,13 @@
 
 @section('content_header')
 
-Dashboard
+<b>Dashboard</b>
 
 @endsection
 
 @section('content')
 
-Welcome to this beautiful admin panel.
+Selamat datang
 
 
 
